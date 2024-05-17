@@ -1,0 +1,84 @@
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "Congtuyen@gmail.com",
+    "password":"123",
+    "firstname":"Cong",
+    "lastname":"Tuyen"
+}
+
+###
+PUT http://localhost:5000/user/657017ec350fb938f184a2f6
+Content-Type: application/json
+
+{
+    "currentUserId": "657017ec350fb938f184a2f6",
+    "currentUserAdminStatus": false,
+    "username": "duchai92@gmail.com",
+    "firstname":"Duc Hai",
+    "lastname": "le",
+    "password": "123"
+}
+
+### 
+DELETE http://localhost:5000/user/657017ec350fb938f184a2f6
+Content-Type: application/json
+
+{
+    "currentUserId": "657017ec350fb938f184a2f6",
+    "currentUserAdminStatus": false
+}
+
+###
+PUT http://localhost:5000/user/6570239f74fac437c8a0b8c8/follow
+Content-Type: application/json
+
+{
+    "currentUserId": "65702796bc73bf5654267cf2"
+}
+
+###
+POST http://localhost:5000/post
+Content-Type: application/json
+
+{
+    "userId": "65702796bc73bf5654267cf2",
+    "desc": "Cong Tuyen posted"
+
+}
+
+###
+PUT http://localhost:5000/post/657033e248df372c050d77a8
+Content-Type: application/json
+
+{
+    "userId": "6570239f74fac437c8a0b8c8",
+    "desc": "Hello, I am Duc Hai. I study software developer"
+
+}
+
+###
+POST http://localhost:5000/chat
+Content-Type: application/json
+
+{
+    "senderId": "65756ad2ff2793f317d71ce3",
+    "receiverId": "65756c04ff2793f317d71cf7"
+
+}
+
+###
+POST http://localhost:5000/message
+Content-Type: application/json
+
+{
+    "chatId": "6577e37f853823ed9a9254b4",
+    "senderId": "65756ad2ff2793f317d71ce3",
+    "text": "Hello How are you"
+}
+
+###
+GET http://localhost:5000/message/6577e37f853823ed9a9254b4
+
+
